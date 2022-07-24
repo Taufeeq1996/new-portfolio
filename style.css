@@ -1,0 +1,246 @@
+html{
+    box-sizing: border-box;
+}
+
+:root {
+    --green-color: #00ABAE;
+    --dark-color: #000000;
+    --gray-color: #303030;
+    --lgray-color: #575757;
+}
+
+body{
+    margin: 2rem 3rem;
+    /* padding: 2%; */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 47rem; */
+}
+nav span {
+    color: var(--green-color);
+}
+nav .logo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav .logo h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+nav a {
+    font-family: Roboto;
+    padding: 0 1rem 0 1rem;
+    text-decoration: none;
+    color: var(--dark-color);
+}
+nav .right-nav {
+    padding-top: 1.3rem;
+}
+
+/* Introduction */
+
+.introduction {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: auto auto;
+    /* justify-content: center;
+    gap: 7rem; */
+}
+
+.introduction  .right-intro{
+    width: 40vw;
+    height: 40vw;
+    background: url(img/my_pic.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 15px solid var(--green-color);
+}
+.introduction .left-intro h1{
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--gray-color);
+    font-size: 3rem;
+    font-weight: 800;
+}
+.introduction .left-intro h1 span{
+    font-weight: bold;
+}
+.introduction .left-intro .name {
+    margin-bottom:4rem;
+    margin-top: 6rem;
+}
+.introduction .left-intro pre {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--gray-color);
+    font-size: 3rem;
+    margin-bottom: 0;
+    font-weight: 900;
+}
+.introduction .left-intro .btn {
+    margin-top: 0;
+}
+.introduction .left-intro .btn button{
+    color: white;
+    background-color: var(--green-color);
+    border: none;
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+    border-radius: 0.3rem;
+}
+/* main */
+main .my-work{
+    margin-top: 7rem;
+}
+main .my-work .work-type{
+    display: flex;
+}
+main .my-work .work{
+    max-width: 30vw;
+    padding-right: 3rem;
+}
+main .my-work h1{
+    font-family: Roboto;
+    font-size: 2rem;
+}
+main .my-work h3{
+    font-family: Roboto;
+    color: var(--gray-color);
+}
+main .my-work p{
+    font-family: Roboto;
+    color: var(--lgray-color);
+}
+/* skills and tools */
+
+.tools {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+.tools img {
+    width: 5vw;
+    margin-right: 4.8rem;
+}
+.tools h1{
+    font-family: Roboto;
+    font-size: 2rem;
+}
+.tools .tools-img {
+    margin-top: 4rem;
+}
+
+/* Projects */
+#my-projects {
+    font-family: Roboto;
+}
+.project-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-family: Roboto;
+    row-gap: 4rem;
+    column-gap: 5rem;
+}
+.project-section img{
+    width: 40vw;
+    border-radius: 1rem;
+}
+.project-section p{
+    color: var(--lgray-color);
+}
+.project-section span {
+    color: var(--gray-color);
+}
+.project-section .heading h3{
+    color: var(--lgray-color);
+}
+
+.project-section .project-btn button{
+    color: white;
+    background-color: var(--green-color);
+    border: none;
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+    border-radius: 0.3rem;
+}
+.project-section .project-pic {
+    position: relative;
+}
+.project-section .project-pic .project-play{
+    position: absolute;
+    top: 10rem;
+    left: 18rem;
+}
+.project-section .project-pic .project-play img{
+    width: 4rem;
+
+}
+/* footer */
+footer {
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 8rem;
+}
+footer .footer-interesting {
+    margin-bottom: 3rem;
+}
+footer .github-linkedin{
+    margin-top: 2rem;
+}
+
+/* Media Screen */
+
+@media only screen and (max-width:600px){
+    header .introduction .left-intro h1{
+        font-size: 2rem;
+    }
+    header .introduction .left-intro .name{
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+    header .introduction .left-intro pre{
+        font-size: 1rem;
+    }
+    header .introduction .right-intro{
+        width: 30vw;
+        height: 30vw;
+    }
+    main .my-work{
+        margin-top: 3rem;
+    }
+    main .my-work .work{
+        max-width: 100vw;
+        padding-right: 0rem;
+    }
+    main .my-work .work-type{
+        flex-wrap: wrap;
+    }
+    main .tools{
+        margin: 0rem;
+    }
+    main .tools .tools-img{
+        margin-top: 0rem;
+    }
+    main .tools img{
+        width: 8vw;
+        margin-right: 2.8rem;
+    }
+    .project-section{
+        display: block;
+    }
+    .project-section .project-div .description{
+        max-width: 100vw;
+    }
+    .project-section .project-pic .project-play{
+        top: 3rem;
+        left: 7rem;
+    }
+    .project-section .project-pic{
+        margin-top: 1rem;
+    }
+    .project-section img{
+        width: 70vw;
+    }
+    footer{
+        margin-top: 4rem;
+    }
+}
