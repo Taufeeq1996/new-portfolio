@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    margin: 2rem 3rem;
+    margin: 2rem 2rem;
     /* padding: 2%; */
 }
 
@@ -38,6 +38,9 @@ nav a {
 }
 nav .right-nav {
     padding-top: 1.3rem;
+}
+nav .toggle{
+    display: none;
 }
 
 /* Introduction */
@@ -120,7 +123,7 @@ main .my-work p{
 }
 .tools img {
     width: 5vw;
-    margin-right: 4.8rem;
+    margin-right: 4rem;
 }
 .tools h1{
     font-family: Roboto;
@@ -188,21 +191,60 @@ footer .github-linkedin{
 }
 
 /* Media Screen */
+@media only screen and (max-width: 950px){
+    header .introduction{
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+    header .introduction .left-intro{
+        order: 1;
+    }
+    main .tools img{
+        width: 13vw;
+        margin-right: 2rem;
+    }
+    main .project-section .project-pic .project-play{
+        top: 4rem;
+        left: 8rem;
+    }
+    main .project-section img{
+        padding-top:8rem;
+    }
+
+}
 
 @media only screen and (max-width:600px){
+    nav .right-nav{
+        display: none;
+    }
+    nav .toggle{
+        display: block;
+        padding-top: 1rem;
+    }
+    nav a {
+        padding: 0rem 0.2rem;
+    }
+    header .introduction {
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+    header .introduction .left-intro{
+        order: 1;
+    }
     header .introduction .left-intro h1{
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
     header .introduction .left-intro .name{
         margin-top: 1rem;
         margin-bottom: 0rem;
     }
     header .introduction .left-intro pre{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     header .introduction .right-intro{
-        width: 30vw;
-        height: 30vw;
+        width: 35vw;
+        height: 35vw;
+        border: 10px solid var(--green-color);
     }
     main .my-work{
         margin-top: 3rem;
@@ -221,8 +263,8 @@ footer .github-linkedin{
         margin-top: 0rem;
     }
     main .tools img{
-        width: 8vw;
-        margin-right: 2.8rem;
+        width: 12vw;
+        margin-right: 3.8rem;
     }
     .project-section{
         display: block;
